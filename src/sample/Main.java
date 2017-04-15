@@ -93,6 +93,6 @@ public class Main extends Application {
             System.out.println("Sisendväärtuse formaat ei sobi, sisend = " + sisend); //errori asemel tekst ja väljund
             //e.printStackTrace();
         }
-        return 0.0; //muul juhul annab 0.0 ehk double vormingus 0.
+        return 0.0; //muul juhul annab 0.0 ehk double vormingus 0
     }
 }
