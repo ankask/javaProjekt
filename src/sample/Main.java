@@ -62,7 +62,7 @@ public class Main extends Application {
         Button sisesta = new Button("Sisesta"); //1. nupp, sisestamiseks
         sisesta.setOnAction(event -> {
             func.lisaListi( nimi.getText(), parsiSisend(neto.getText()), parsiSisend(bruto.getText())); //andmete sisestus
-            // Double-iks tegemise errori ja 0 sisestamise vajaduse eemaldamiseks kautan ka parsiSisend meetodid netol ja brutol
+            // Double-iks tegemise errori ja 0 sisestamise vajaduse eemaldamiseks kasutan ka parsiSisend meetodid netol ja brutol
             nimi.clear(); neto.clear(); bruto.clear(); //välja tühjendamine
         });
 
@@ -91,7 +91,7 @@ public class Main extends Application {
             }
         } catch (NumberFormatException e) { //muul juhul annaks errorid, kuid eemaldasime ülearuse rea
             System.out.println("Sisendväärtuse formaat ei sobi, sisend = " + sisend); //errori asemel tekst ja väljund
-            //e.printStackTrace();
+            //e.printStackTrace(); //errorite väljastamise rida, mille eemaldasime
         }
         return 0.0; //muul juhul annab 0.0 ehk double vormingus 0
     }
