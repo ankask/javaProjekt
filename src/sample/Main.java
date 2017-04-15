@@ -62,7 +62,7 @@ public class Main extends Application {
         Button sisesta = new Button("Sisesta"); //1. nupp, sisestamiseks
         sisesta.setOnAction(event -> {
             func.lisaListi( nimi.getText(), parsiSisend(neto.getText()), parsiSisend(bruto.getText())); //andmete sisestus
-            // Double-iks tegemise errori ja 0 sisestamise vajaduse asja vaadata, kui jõuan!
+            // Double-iks tegemise errori ja 0 sisestamise vajaduse eemaldamiseks kautan ka parsiSisend meetodid netol ja brutol
             nimi.clear(); neto.clear(); bruto.clear(); //välja tühjendamine
         });
 
@@ -82,16 +82,17 @@ public class Main extends Application {
         // kõigi valitud nuppude ja väljade näitamine
         paan.getChildren().add(vbox);
     }
-
-    private Double parsiSisend(String sisend) {
-        try {
-            if (!sisend.isEmpty()) {
-                return Double.parseDouble(sisend);
+/*@Author Kristel Meikas**/
+    private Double parsiSisend(String sisend) { //funktsioon/meetod, et katsetada, kas on puhas number või ei
+        //private - saab kasutada ainult sama faili sees, public - saab kasutada ka mujalt
+        try { //try-catch katsetus
+            if (!sisend.isEmpty()) { //kui ei ole tühi
+                return Double.parseDouble(sisend); //siis võib parsida Double'iks
             }
-        } catch (NumberFormatException e) {
-            System.out.println("Sisendväärtuse formaat ei sobi, sisend = " + sisend);
+        } catch (NumberFormatException e) { //muul juhul annaks errorid, kuid eemaldasime ülearuse rea
+            System.out.println("Sisendväärtuse formaat ei sobi, sisend = " + sisend); //errori asemel tekst ja väljund
             //e.printStackTrace();
         }
-        return 0.0;
+        return 0.0; //muul juhul annab 0.0 ehk double vormingus 0.
     }
 }

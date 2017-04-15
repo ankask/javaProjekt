@@ -9,8 +9,8 @@ public class Funktsioonid extends Main {
     //muutujad stringid ja double-id (et ka komadega arvestaks)
     String nimi;
 
-    Double neto = 0.0; //Kui pole teada, siis sisestada 0. Muul juhul number.
-    Double bruto = 0.0; //Kui pole teada, siis sisestada 0. Muul juhul number.
+    Double neto = 0.0; //Algväärtus 0. Kui pole teada, siis saab sisestada 0 või tühjaks jätta. Muul juhul number.
+    Double bruto = 0.0; //Algväärtus 0. Kui pole teada, siis saab sisestada 0 või tühjaks jätta. Muul juhul number.
     Double fondid = 0.0; //igaühel eraldi palgafond
     Double koguFond = 0.0; //summaarne palgafond ettevõtjale
 
