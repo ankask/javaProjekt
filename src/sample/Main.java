@@ -23,13 +23,13 @@ import javafx.scene.layout.Pane;
 
 public class Main extends Application {
 
-/*@Author Hardi Tiitus ja Marko Esna - 1 rida**/
+/**@Author Hardi Tiitus ja Marko Esna - 1 rida*/
     @Override
 
     public void start(Stage primaryStage) throws Exception{
 
-/*@Author Marko Esna - 1 rida **/
-        Funktsioonid func = new Funktsioonid(); //Loob funktsioonide listi
+/**@Author Marko Esna - 1 rida */
+        Funktsioonid func = new Funktsioonid(); //Loob objekti
         Pane paan = new Pane();   //Loob uue paani
         Scene stseen = new Scene(paan, 375, 425); //Loob uue stseeni, määrab selle kõrguse ja laiuse
         primaryStage.setScene(stseen);
@@ -45,7 +45,7 @@ public class Main extends Application {
 
 
         //Loob lahtrid teksti ja numbrite sisestuseks
-/*@Author Külli Ristilt  - 1 rida **/
+/**@Author Külli Ristilt  - 1 rida */
         Label nimiVali = new Label("Sisesta töötaja nimi:"); //Loob ja sisestab rea enne sisestuskastikest
         TextField nimi = new TextField();      //Loob tekstikasti
         nimi.setPromptText("sisesta nimi");   //loob informatiivse teksti tekstikasti
@@ -62,7 +62,7 @@ public class Main extends Application {
 
         //Loob nupud sisestuse, arvutamise ja puhastamise tarbeks koos lisatud funktsioonidega
 
-/*@Author Marko Esna - funktsiooni kasutamise ülesehitus, mis minu poolt ümber tehtud**/
+/**@Author Marko Esna - funktsiooni kasutamise ülesehitus, mis minu poolt ümber tehtud */
         Button sisesta = new Button("Sisesta"); //Loob "Sisesta" nupu teksti sisestamise kinnitamiseks
         sisesta.setOnAction(event -> { //Nupuga kaasnevad funktsioonid
             func.lisaListi( nimi.getText(), parsiSisend(neto.getText()), parsiSisend(bruto.getText())); //Sisestab andmed
@@ -88,9 +88,13 @@ public class Main extends Application {
         // Näitab kõiki valitud nuppe ja välju
     }
 
-    //Meetod, et katsetada, kas neto ja bruto on puhtad numbrid või ei ole ning vastavalt neid muuta
 
-/*@Author Kristel Meikas**/
+    /**Neto ja bruto numbrivormingu kontrollimine ja vajadusel asendamine.
+     * @Author Kristel Meikas
+     * @param sisend String
+     * @return parsiSisend Double
+     * */
+
     private Double parsiSisend(String sisend) {
         //Private - saab kasutada ainult sama faili sees, public - saab kasutada ka mujalt
         try { //Try-catch katsetus

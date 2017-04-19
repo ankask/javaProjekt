@@ -16,18 +16,23 @@ public class Funktsioonid extends Main {
 
     //Listid muutujate jaoks
 
-/*@Author Marko Esna - näidis**/
+/**@Author Marko Esna - näidis*/
     ArrayList<String> nimed = new ArrayList<>();
     ArrayList<Double> netod = new ArrayList<>();
     ArrayList<Double> brutod = new ArrayList<>();
     ArrayList<Double> palgafondid = new ArrayList<>();
 
 
-    //Funktsioon väärtuste listi lisamiseks
+    /**
+     * Väärtuste listi lisamine.
+     * @param nimi String
+     * @param neto Double
+     * @param bruto Double
+     */
 
     public void lisaListi(String nimi, Double neto, Double bruto){
 
-/*@Author Marko Esna - näidis**/
+/**@Author Marko Esna - näidis*/
         nimed.add(nimi); //Lisab uue inimese nime listi järgmisele kohale
         netod.add(neto); //Lisab uue inimese netopalga listi järgmisele kohale
         brutod.add(bruto); //Lisab uue inimese brutopalga listi järgmisele kohale
@@ -37,8 +42,10 @@ public class Funktsioonid extends Main {
 
     //Muudab nimed Camel Case'ile vastavaks (esimene täht igas sõnas suurtäht), nagu eesti keele reeglitele kohane.
 
-/*@Author Java With Us
+/** @Author Java With Us
 * http://www.javawithus.com/programs/converting-string-to-different-cases-upper-lower-toggle-camel-sentence-case
+* @param inputString String
+* @return toCamelCase String
 **/
 
     public static String toCamelCase(String inputString) {
@@ -64,7 +71,9 @@ public class Funktsioonid extends Main {
     }
 
 
-    //Funktsioon netode, brutode ja palgafondide leidmiseks ning info väljaprintimiseks.
+    /**
+     * Netode, brutode ja palgafondide leidmine ning info väljaprintimine.
+     */
 
     public void fondiArvutused(){
         DecimalFormat f = new DecimalFormat("##.00"); //Muudab 0,xxxxxxx... numbrid 0,xx-ks.
@@ -115,7 +124,9 @@ public class Funktsioonid extends Main {
         }
     }
 
-    //Meetod muutab numbrid täpsusele 2 kohta pärast koma ja trükib välja erinevad tekstid.
+    /**
+     * Numbrite ümardamine ja tekstide välja trükkimine.
+     */
 
     public void lopp() {
         DecimalFormat f = new DecimalFormat("##0.00"); //Muudab 0,xxxxxxx... kujul numbrid 0,xx-ks.
