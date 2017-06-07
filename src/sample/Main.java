@@ -23,6 +23,8 @@ import javafx.scene.layout.Pane;
 
 public class Main extends Application {
 
+
+
 /**@Author Hardi Tiitus ja Marko Esna - 1 rida*/
     @Override
 
@@ -107,4 +109,6 @@ public class Main extends Application {
         }
         return 0.0; //Muul juhul annab 0.0 ehk double vormingus 0
     }
+
+
 }

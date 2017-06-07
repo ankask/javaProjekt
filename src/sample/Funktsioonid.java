@@ -42,11 +42,11 @@ public class Funktsioonid extends Main {
 
     //Muudab nimed Camel Case'ile vastavaks (esimene täht igas sõnas suurtäht), nagu eesti keele reeglitele kohane.
 
-/** @Author Java With Us
-* http://www.javawithus.com/programs/converting-string-to-different-cases-upper-lower-toggle-camel-sentence-case
-* @param inputString String
-* @return toCamelCase String
-**/
+    /** @Author Java With Us
+    * http://www.javawithus.com/programs/converting-string-to-different-cases-upper-lower-toggle-camel-sentence-case
+    * @param inputString String
+    * @return toCamelCase String
+    **/
 
     public static String toCamelCase(String inputString) {
         String result = ""; //Loob muutuja
@@ -116,7 +116,7 @@ public class Funktsioonid extends Main {
                 System.out.println("Palgafond kasutajal " + nimed.get(i)+  " on " + f.format(palgafondid.get(i)) + " eurot.");
                 //Trükib sellise teksti täpsusega kaks kohta pärast koma
                 koguFond = koguFond + palgafondid.get(i); //Liidab saadud palgafondi kogufondile juurde
-                System.out.println("Aasta palgafond kasutajal " + nimed.get(i)+  " on " + f.format(palgafondid.get(i)*12) + " eurot.");
+                System.out.println("Aastane palgafond kasutajal " + nimed.get(i)+  " on " + f.format(palgafondid.get(i)*12) + " eurot.");
                 //Leiab aastafondi ja trükib välja
             }
             else continue; //Muul juhul jätab rea vahele ja liigub järgmise juurde
